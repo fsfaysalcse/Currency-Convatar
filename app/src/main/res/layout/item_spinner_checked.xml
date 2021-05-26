@@ -1,0 +1,11 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Select One"
+    android:padding="5dp"
+    android:fontFamily="@font/wo_sans_regular"
+    android:textColor="@color/purple_700"
+    android:textSize="15sp"
+    android:ellipsize="marquee"
+    android:singleLine="true" />

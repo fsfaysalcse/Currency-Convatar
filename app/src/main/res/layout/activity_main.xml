@@ -5,66 +5,67 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
         android:orientation="vertical"
+        android:background="@color/purple_700"
         tools:context=".MainActivity">
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="5dp"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="16dp">
 
 
         <EditText
                 android:id="@+id/et_currency"
-                android:layout_weight="6"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Amount"
-                android:padding="10dp"
-                android:background="@drawable/bg_edittext"
-        />
+                android:padding="13dp"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:fontFamily="@font/wo_sans_medium"
+                android:background="@drawable/bg_edittext"/>
 
-        <Spinner
-                android:id="@+id/currencies_dropdown"
-                android:layout_weight="4"
-                android:layout_width="0dp"
+        <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:entries="@array/item_currencies"/>
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/bg_edittext"
+                android:orientation="vertical">
 
+
+            <Spinner
+                    android:id="@+id/currencies_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="right"
+                    android:entries="@array/item_currencies"/>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-            android:id="@+id/btn_convert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Convert"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="right"/>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
             android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        <ProgressBar
-                android:id="@+id/loading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_height="match_parent"
                 android:visibility="gone"/>
-
-
     </LinearLayout>
 
 

@@ -1,6 +1,5 @@
 package com.faysal.currencycon.data
 
-import com.faysal.currencycon.data.models.CurrenciesListResponse
 import com.faysal.currencycon.util.Constants
 import okhttp3.ResponseBody
 import retrofit2.Response
@@ -13,5 +12,11 @@ interface CurrencyApi {
     suspend fun getCurrenciesList(
         @Query("access_key") access_key : String = Constants.API_KEY
     ) : Response<ResponseBody>
+
+    @GET("/live")
+    suspend fun getCurrencyRates(
+            @Query("access_key") access_key : String = Constants.API_KEY
+    ) : Response<ResponseBody>
+
 
 }
